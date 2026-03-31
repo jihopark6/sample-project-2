@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.responsive.css">
     <title>Sample Project 2</title>
 </head>
 <body>
-    <h1>Welcome</h1>
-    <p>Hello world</p>
+    <header>
+        <h1>Welcome</h1>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="#">Top</a></li>
+                <li><a href="#">Cards</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                    <img src="" alt="Thumbnail">
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis velit vitae odio sodales rhoncus. Donec in sollicitudin diam, non euismod mi. Aliquam erat volutpat. Praesent venenatis vel augue a porta. Sed ut tempor diam. Duis aliquet sapien turpis, ut efficitur odio condimentum nec. Praesent eu diam sed tortor auctor blandit. Donec aliquet tincidunt vestibulum. Aliquam feugiat maximus vehicula. Nam egestas porttitor condimentum. </p>
+            </article>
+        </section>
+        
+    </main>
+    <footer>
+        <form action="./index.html" method="post">
+            <div>
+                <label for="name">Name</form>
+                <input type="text" id="name" name="name" readonly value="" />    
+            </div>
+
+            <div>
+                <label for="email">Email</form>
+                <input type="email" id="email" name="email" readonly value="" />    
+            </div>
+
+            <div>
+                <label for="subject">Subject</form>
+                <select name="subject" id="subject" readonly>
+                    <option value="">Please choose an item</option>
+                    <option value="I want to offer you a position">I want to offer you a position</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message">Message</form>
+                <textarea name="message" id="message"></textarea>   
+            </div>
+
+            <button>Send</button>
+        </form>
+    </footer>
 </body>
 </html>
