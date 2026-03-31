@@ -1,0 +1,122 @@
+body { 
+ 
+    font-family: Arial, Helvetica, sans-serif;
+    background:#efefef;
+}
+
+button {
+    display:block;
+    padding:10px 20px;
+    background:#33f;
+    color:#fff;
+    border:none;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+
+header div.container { 
+    display:flex; 
+    flex-direction: column;
+    align-content:stretch;
+}
+
+header div.container nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+
+}
+
+header div.container nav ul li {
+
+    width:100%;
+}
+
+header div.container nav ul li a {
+    display:block;
+    padding:40px;
+    font-weight: 600;
+    text-decoration: none;
+    color:#999;
+}
+
+header div.container nav ul li a:hover {
+    text-decoration: underline;
+    color:#333; 
+}
+
+main section {
+    display: grid;
+    grid-template-columns: auto;
+    background:#fff;
+    border-radius:5px;
+    overflow:hidden;
+    padding:20px;
+    row-gap: 20px;
+
+}
+
+
+
+main section article{
+    padding:20px;
+    border: 1px solid #ccc;
+}
+
+main section article:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0 10px 5px -5px;
+}
+
+main section article img{
+    max-width: 200px;
+    float: left;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+main section article button {
+    background: #f33;
+}
+
+footer {
+    background:#fff;
+    border-radius:5px;
+    overflow:hidden;
+    padding:20px;
+    margin-top:20px;
+
+
+}
+
+footer form {
+    
+}
+
+footer form div {
+    
+}
+
+footer form label {
+    display:block;
+    margin-bottom:5px;
+
+}
+
+footer form input, footer form textarea, footer form select{
+    display:block;
+    width:100%;
+    margin-bottom:20px;
+    padding:10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+footer form input:focus, footer form textarea:focus, footer form select:focus{
+    border: 1px solid #f00;
+}
+
+footer form button {
+    width: 100%;
+}

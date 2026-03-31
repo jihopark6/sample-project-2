@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/style.responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.responsive.css" type="text/css">
     <title>Sample Project 2</title>
 </head>
 <body>
     <header>
-        <h1>Welcome</h1>
-        <nav>
-            <ul>
-                <li><a href="./">Home</a></li>
-                <li><a href="#">Top</a></li>
-                <li><a href="#">Cards</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Welcome</h1>
+            <nav>
+                <ul>
+                    <li><a href="./">Home</a></li>
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main id="projects">
         <section>
+            <h2>Projects</h2>
             <article>
-                    <img src="" alt="Thumbnail">
+                    <img src="https://placehold.co/800x600?text=Project+1&font=roboto" alt="Project 1 Thumbnail">
                     <h3>Project 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis velit vitae odio sodales rhoncus. Donec in sollicitudin diam, non euismod mi. Aliquam erat volutpat. Praesent venenatis vel augue a porta. Sed ut tempor diam. Duis aliquet sapien turpis, ut efficitur odio condimentum nec. Praesent eu diam sed tortor auctor blandit. Donec aliquet tincidunt vestibulum. Aliquam feugiat maximus vehicula. Nam egestas porttitor condimentum. </p>
+                    <button type="button">View project</button>
+            </article>
+
+            <article>
+                    <img src="https://placehold.co/800x600?text=Project+2&font=roboto" alt="Project 2 Thumbnail">
+                    <h3>Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In venenatis velit vitae odio sodales rhoncus. Donec in sollicitudin diam, non euismod mi. Aliquam erat volutpat. Praesent venenatis vel augue a porta. Sed ut tempor diam. Duis aliquet sapien turpis, ut efficitur odio condimentum nec. Praesent eu diam sed tortor auctor blandit. Donec aliquet tincidunt vestibulum. Aliquam feugiat maximus vehicula. Nam egestas porttitor condimentum. </p>
+                    <button type="button">View project</button>
             </article>
         </section>
         
     </main>
-    <footer>
+    <footer id="contact">
+        <div class="container">
+        <h2>Contact me</h2>
         <form action="./index.html" method="post">
             <div>
-                <label for="name">Name</form>
+                <label for="name">Name</label>
                 <input type="text" id="name" name="name" readonly value="" />    
             </div>
 
             <div>
-                <label for="email">Email</form>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" readonly value="" />    
             </div>
 
             <div>
-                <label for="subject">Subject</form>
+                <label for="subject">Subject</label>
                 <select name="subject" id="subject" readonly>
                     <option value="">Please choose an item</option>
                     <option value="I want to offer you a position">I want to offer you a position</option>
@@ -50,12 +63,13 @@
             </div>
 
             <div>
-                <label for="message">Message</form>
+                <label for="message">Message</label>
                 <textarea name="message" id="message"></textarea>   
             </div>
 
             <button>Send</button>
         </form>
+        </div>
     </footer>
 </body>
 </html>

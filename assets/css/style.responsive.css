@@ -1,0 +1,19 @@
+
+
+@media screen and (min-width: 1028px) {
+
+    header div.container { 
+        display:flex; 
+        flex-direction: row;
+    }
+    header div.container nav ul {
+        display: flex;
+        flex-direction: row;
+        row-gap: 10px;
+    }
+
+    header div.container nav ul li {
+        width:auto;
+    }
+
+}
