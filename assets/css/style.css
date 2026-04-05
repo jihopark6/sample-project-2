@@ -57,7 +57,14 @@ main section {
 
 }
 
+main section #search-ui {
+    text-align:right;
+}
 
+main section #search-ui input {
+    border:1px solid #ccc;
+    padding:20px;
+}
 
 main section article{
     padding:20px;
