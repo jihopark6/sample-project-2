@@ -22,10 +22,25 @@ const exampleData = [
 window.addEventListener('load', () => {
     renderProjects();
     console.log('Projects rendered successfully!');
+
+    document.querySelector('#search-input').addEventListener('keyup', (event) => {
+        const searchTerm = event.target.value;
+        renderProjects(searchTerm);
+    });
 });
 
-function renderProjects(){
-    for (const project of exampleData) {
+
+
+function renderProjects(filterString){
+    let filteredData = exampleData;
+
+    document.querySelector('#projects-container').innerHTML = ''; 
+    
+    if(typeof filterString === 'string' && filterString.trim() !== ''){
+        filteredData = exampleData.filter(project => project.title.toLowerCase().includes(filterString.trim().toLowerCase())); // Case insentive search
+    }
+
+    for (const project of filteredData) {
         const projectHTML = `
                 <img src="${project.image_url}" alt="Thumbnail of ${project.title}">
                 <h3>${project.title}</h3>
