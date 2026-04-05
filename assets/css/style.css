@@ -57,11 +57,20 @@ main section {
 
 }
 
+main section #search-ui {
+    text-align:right;
+}
 
+main section #search-ui input {
+    border:1px solid #ccc;
+    padding:20px;
+    width:100%;
+}
 
 main section article{
     padding:20px;
     border: 1px solid #ccc;
+    margin-top:20px;
 }
 
 main section article:hover {

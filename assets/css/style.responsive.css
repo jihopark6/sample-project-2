@@ -16,4 +16,8 @@
         width:auto;
     }
 
+    main section #search-ui input {
+        width:200px;
+    }
+
 }
