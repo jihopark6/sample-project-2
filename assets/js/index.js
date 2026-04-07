@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
 
 function fetchProjects(){
     
-    const response = fetch('./assets/data/projects.json')
+    const response = fetch('https://magnetikworks.github.io/project-data/data/projects.json')
     .then(response => response.json())
     .then(data => {
         exampleData = data;
@@ -24,7 +24,7 @@ function fetchProjects(){
 
 function renderProjects(filterString){
     let filteredData = exampleData;
-
+    let projectImg = "";
     document.querySelector('#projects-container').innerHTML = ''; 
     
     if(typeof filterString === 'string' && filterString.trim() !== ''){
@@ -32,10 +32,11 @@ function renderProjects(filterString){
     }
 
     for (const project of filteredData) {
+        projectImg = project.image_url ?? "https://placehold.co/800x400?text=Project+Image&font=roboto";
         const projectHTML = `
-                <img src="${project.image_url}" alt="Thumbnail of ${project.title}">
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
+                <img src="${projectImg}" alt="Thumbnail of ${project.projectName}">
+                <h3>${project.projectName}</h3>
+                <p>${project.projectDescription}</p>
                 <button type="button">View project</button>
         `;
         const projectElement = document.createElement('article');
