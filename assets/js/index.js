@@ -1,6 +1,6 @@
 let exampleData = [];
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
 
     fetchProjects();
 
@@ -10,16 +10,16 @@ window.addEventListener('load', () => {
     });
 });
 
-function fetchProjects(){
+async function fetchProjects(){
     
-    const response = fetch('https://magnetikworks.github.io/project-data/data/projects.json')
-    .then(response => response.json())
-    .then(data => {
+    try {
+        const response = await fetch('https://magnetikworks.github.io/project-data/data/projects.json');
+        const data = await response.json();
         exampleData = data;
         renderProjects();
-    })
-    .catch(error => console.error('Error fetching projects:', error));
-    
+    } catch (error) {
+        console.error("Error fetching project data:", error);
+    }
 }
 
 function renderProjects(filterString){
@@ -28,7 +28,8 @@ function renderProjects(filterString){
     document.querySelector('#projects-container').innerHTML = ''; 
     
     if(typeof filterString === 'string' && filterString.trim() !== ''){
-        filteredData = exampleData.filter(project => project.title.toLowerCase().includes(filterString.trim().toLowerCase())); // Case insentive search
+        //filteredData = exampleData.filter(project => project.title.toLowerCase().includes(filterString.trim().toLowerCase())); // Case insentive search
+        filteredData = exampleData.filter(project => project.projectName.toLowerCase().includes(filterString.trim().toLowerCase())); 
     }
 
     for (const project of filteredData) {
